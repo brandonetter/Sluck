@@ -40,14 +40,9 @@ function Landing() {
                                     <img src='https://shields.io/badge/GitHub-Brandon%20Etter-400d40?logo=github&style=plastic' alt='github' />
                                 </a>
                             </div>
-                            <div className='social-item'>
-                                <a href='https://github.com/ymao21' target='_blank' >
-                                    <img src='https://shields.io/badge/GitHub-Yining%20Mao-400d40?logo=github&style=plastic' alt='github' />
-                                </a>
-                            </div>
                         </div>
                         <div>
-                            <a href='https://github.com/brandonetter/SlackClone' target='_blank'>
+                            <a href='https://github.com/brandonetter/Sluck' target='_blank'>
                                 <img src='https://shields.io/badge/GitHub-Sluck%20Repository-400d40?logo=github&style=for-the-badge' alt='github' />
                             </a>
                         </div>
