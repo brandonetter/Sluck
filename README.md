@@ -19,6 +19,9 @@ Sluck is a Python and React project meant to emulate core functionality of the p
 
 ---
 
+![image](https://github.com/brandonetter/Sluck/assets/4108484/72986fc3-90dd-4ec5-a95e-a6fa6c52eb08)
+
+
 ### Building The Application
 
     pip install -r requirements.txt
