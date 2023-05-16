@@ -2,7 +2,7 @@
 from .db import db, environment, SCHEMA, add_prefix_for_prod
 from .type import Type
 from sqlalchemy.sql import func
-
+from flask_login import current_user
 class Room(db.Model):
     __tablename__ = 'rooms'
 
@@ -35,6 +35,20 @@ class Room(db.Model):
         return [message for message in self.messages]
 
     def to_dict(self):
+        if self.type == 1:
+            members = [member.to_dict() for member in self.member_list]
+            # get the member that is not the current user
+            other_member = [member for member in members if member['id'] != current_user.id][0]
+
+            return {
+                'id': self.id,
+                'name': self.name,
+                'createdby': self.createdby,
+                'type': self.type,
+                'createdat': self.createdat,
+                'updatedat': self.updatedat,
+                'user': other_member,
+            }
         return {
             'id': self.id,
             'name': self.name,

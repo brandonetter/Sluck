@@ -7,8 +7,6 @@ import { useSelector } from "react-redux";
 import MainChatInput from "../MainChatInput";
 import defaultIcon from "../../assets/defaultIcon.png";
 import "./MainChat.css";
-import Modal from "../ChannelModal/ChannelModal";
-import DmsModal from "../DmsModal/DmsModal";
 
 
 import ChatMessage from "./component/ChatMessage";
@@ -37,6 +35,7 @@ function MainChat() {
   }, []);
   useEffect(() => {
     setMessages([]);
+    setFormattedMessages([]);
     clearInterval(intervalId);
 
   }, [currentChannel]);
@@ -122,8 +121,10 @@ function MainChat() {
     } else {
       setScrollLock(false);
     }
-
-    setFormattedMessages(newMessages);
+    setTimeout(() => {
+      setFormattedMessages(newMessages)
+    }, 450
+    );
 
   }, [messages]);
   useEffect(() => {
@@ -181,36 +182,12 @@ function MainChat() {
     <div className="main-chat-container">
       {redirect}
       <div className="main-chat" onScroll={checkScroll}>
-        {messages.length > 0 ? (
+        {formattedMessages.length > 0 ? (
           <div className="main-chat-header">
             {currentChannel && <h1 className='chat-room-name'>{currentChannel.name} </h1>}
 
 
-            <div className="ChannelDetailModalContainer">
-              <button
-                className="openChannelModalBtn"
-                onClick={() => {
-                  setModalOpen(true);
-                }}
-              >
-                View Details
-              </button>
 
-              {modalOpen && <Modal setOpenModal={setModalOpen} />}
-            </div>
-
-            {/* <div className="DmsDetailModalContainer">
-          <button
-            className="openDmsModalBtn"
-            onClick={() => {
-              setModalOpen(true);
-            }}
-          >
-            Chat Details
-          </button>
-
-          {modalOpen && <Modal setOpenModal={setModalOpen} />}
-          </div> */}
 
 
             <div className='main-chat-user-list'>
@@ -232,7 +209,7 @@ function MainChat() {
 
         </div>
       </div>
-      {messages.length === 0 && (
+      {formattedMessages.length === 0 && (
         <div className="main-chat-suspense">
 
 

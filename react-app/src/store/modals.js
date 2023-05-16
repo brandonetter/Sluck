@@ -67,6 +67,22 @@ export const getAllGroups = () => async (dispatch) => {
         return data;
     }
 };
+export const getAllChannels = () => async (dispatch) => {
+    const response = await fetch("/api/room/channel/all", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+
+    });
+    if (response.ok) {
+        const data = await response.json();
+        if (data.errors) {
+            return;
+        }
+        return data;
+    }
+};
 
 
 export const createGroupDM = (users) => async (dispatch) => {

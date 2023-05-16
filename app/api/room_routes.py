@@ -146,11 +146,24 @@ def allGroups():
     # # get all the rooms that the user is a member of
     rooms = current_user.rooms
     # filter the rooms to only get the group rooms
-    groups = [room for room in rooms if room.type == 2]
+    groups = [room for room in rooms if room.type !=3]
     if(len(groups) == 0):
         return {'error':'null'}
     else:
         return [group.to_dict() for group in groups]
+
+@room_routes.route('/channel/all',methods = ['POST'])
+@login_required
+def allChannels():
+    # # get all the rooms that the user is a member of
+    rooms = current_user.rooms
+    # filter the rooms to only get the group rooms
+    groups = [room for room in rooms if room.type == 3]
+    if(len(groups) == 0):
+        return {'error':'null'}
+    else:
+        return [group.to_dict() for group in groups]
+
 
 @room_routes.route('/group/', methods = ['POST'])
 @login_required

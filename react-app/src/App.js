@@ -5,7 +5,6 @@ import LoginFormPage from "./components/LoginFormPage";
 import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
 import MainWindow from "./components/MainWindow";
-import EditChannelForm from "./components/ChannelForm/EditChannelForm";
 import Landing from "./components/Landing";
 
 function App() {
