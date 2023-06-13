@@ -81,4 +81,6 @@ This allowed me for the first time to not worry about z-index or layers or break
  I'm very happy with this solution and it allowed me to have many windows and states managed quickly and easily, as seen here:
 
  [window-example.webm](https://user-images.githubusercontent.com/4108484/232329025-267a24f8-0677-4fec-80a6-3950cb6f646a.webm)
+![image](https://github.com/brandonetter/Sluck/assets/4108484/8ea26df3-27f7-4690-ba46-ed2b6a183ab7)
+![image](https://github.com/brandonetter/Sluck/assets/4108484/18c520b3-39a2-499f-b307-5948fd8d3eaf)
 
