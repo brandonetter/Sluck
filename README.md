@@ -7,7 +7,7 @@
 
 ![postgres](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)![flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)![font-awesome](https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white)![socket-io](https://img.shields.io/badge/Socket.io-010101?&style=for-the-badge&logo=Socket.io&logoColor=white)
 
-Sluck is a Python and React project meant to emulate core functionality of the popular messaging app, [Slack](http://slack.com). Sluck was created as part of the [App Academy Part-Time Program](https://www.appacademy.io/) by:
+Sluck is a Python and React project meant to emulate core functionality of the popular messaging app, [Slack](http://slack.com). 
 
  - [Brandon Etter](https://github.com/brandonetter)
 
